@@ -1,0 +1,35 @@
+.navbar-container {
+    width: 100%;
+    height: 7vh;
+    background-color: white;
+    border-bottom: 1px solid #d3d3d3; /* light grey */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    box-sizing: border-box;
+}
+
+.navbar-left,
+.navbar-right {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
