@@ -1,15 +1,14 @@
-// src/firebase.js
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCeMVRSHVtoYS9mcX9GwZEPJtKa6fC42DU",
-    authDomain: "dua-for-dhikr.firebaseapp.com",
-    projectId: "dua-for-dhikr",
-    storageBucket: "dua-for-dhikr.firebasestorage.app",
-    messagingSenderId: "693769892973",
-    appId: "1:693769892973:web:4d75bfeebb0e84adc6bb64",
-    measurementId: "G-MG7H49JJMR"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);

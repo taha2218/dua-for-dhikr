@@ -25,7 +25,7 @@ function Navbar() {
                 <span className="navbar-title">Dua For Dhikr</span>
             </div>
             <div className="navbar-right">
-                <FiLogOut size={20} />
+                <FiLogOut size={20} onClick={handleLogout} />
             </div>
         </div>
     );
