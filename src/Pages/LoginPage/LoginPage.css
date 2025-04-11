@@ -1,5 +1,5 @@
 .login-page-container {
-    height: calc(var(--vh, 1vh) * 100);
+    height: calc(var(--vh, 1vh) * 95);
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
 }
 
 .dua-illustration img {
-    width: 70vw;
+    width: 75%;
     height: auto;
     object-fit: contain;
 }
