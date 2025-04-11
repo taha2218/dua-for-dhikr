@@ -1,13 +1,13 @@
 import './LoginPage.css';
 import duaLogo from '../../static/Logos/DUA_LOGO.png';
-import { ReactComponent as Illustration } from '../../static/svg/illustration.svg';
+import Illustration from '../../static/Logos/mosque.png';
 import googleIcon from '../../static/Logos/search.png';
 
 function LoginPage() {
     return (
         <div className='login-page-container'>
             <div className='dua-illustration'>
-                <Illustration />
+                <img src={Illustration} alt="DUA Logo" />
             </div>
             <div className='dua-logo'>
                 <img src={duaLogo} alt="DUA Logo" />
