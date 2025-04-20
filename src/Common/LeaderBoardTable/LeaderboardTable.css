@@ -1,0 +1,49 @@
+.leaderboard-table {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .leaderboard-header {
+    display: flex;
+    padding: 0.75rem 0;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    font-weight: 500;
+    background-color: #f7f7f7;
+  }
+  
+  .leaderboard-row {
+    display: flex;
+    font-size: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid lightgrey;
+    align-items: center;
+  }
+  
+  .rank-col {
+    width: 40px;
+    text-align: center;
+  }
+  
+  .name-col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  .flag-img-inline {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-right: 6px;
+  }
+  
+  .count-col {
+    width: 60px;
+    text-align: right;
+    padding-right: 0.5rem;
+  }
+  

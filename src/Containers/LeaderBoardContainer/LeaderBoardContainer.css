@@ -1,0 +1,16 @@
+.leaderboard-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  .leaderboard-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: black;
+  }
+  
