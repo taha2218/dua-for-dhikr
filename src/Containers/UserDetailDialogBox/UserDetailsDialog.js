@@ -1,36 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './UserDetailsDialog.css';
+import { getAllCountries } from '../../Actions/ApiActions';
 
 function UserDetailsDialog({ onSave }) {
     const [name, setName] = useState('');
     const [country, setCountry] = useState('');
     const [countries, setCountries] = useState([]);
+    const [touched, setTouched] = useState({ name: false, country: false });
 
     useEffect(() => {
         const fetchCountries = async () => {
             try {
-                const response = await axios.get('https://restcountries.com/v3.1/all');
-                const countryList = response.data
-                    .map((c) => ({
-                        code: c.cca2,
-                        name: c.name.common
-                    }))
-                    .sort((a, b) => a.name.localeCompare(b.name)); // sort alphabetically
+                const countryList = await getAllCountries();
                 setCountries(countryList);
             } catch (err) {
                 console.error('Error fetching countries:', err);
             }
         };
-
         fetchCountries();
     }, []);
 
     const handleSubmit = () => {
-        if (name && country) {
+        if (name.trim() && country) {
             onSave({ name, country });
         }
     };
+
+    const isNameValid = name.trim().length >= 2;
+    const isCountryValid = country !== '';
+    const isFormValid = isNameValid && isCountryValid;
 
     return (
         <div className="user-dialog-overlay">
@@ -43,9 +41,13 @@ function UserDetailsDialog({ onSave }) {
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        onBlur={() => setTouched((prev) => ({ ...prev, name: true }))}
                         className="dialog-input"
                         placeholder="Enter your name"
                     />
+                    {!isNameValid && touched.name && (
+                        <div className="error-text">* Name must be at least 2 characters</div>
+                    )}
                 </div>
 
                 <div className="dialog-group">
@@ -53,6 +55,7 @@ function UserDetailsDialog({ onSave }) {
                         id="country"
                         value={country}
                         onChange={(e) => setCountry(e.target.value)}
+                        onBlur={() => setTouched((prev) => ({ ...prev, country: true }))}
                         className="dialog-select"
                     >
                         <option value="">Select Country</option>
@@ -62,11 +65,21 @@ function UserDetailsDialog({ onSave }) {
                             </option>
                         ))}
                     </select>
+                    {!isCountryValid && touched.country && (
+                        <div className="error-text">* Please select a country</div>
+                    )}
                 </div>
 
-                <div className='dialog-buttons'>
-                    <button className="dialog-btn" onClick={handleSubmit}>Save</button>
-                    <button className="dialog-btn light" onClick={handleSubmit}>Close</button>
+                <div className="dialog-buttons">
+                    <button
+                        className="dialog-btn"
+                        onClick={handleSubmit}
+                        disabled={!isFormValid}
+                        style={{ background: isFormValid ? 'black' : '#ccc', color: isFormValid ? 'white' : '#666' }}
+                    >
+                        Save
+                    </button>
+                    <button className="dialog-btn light" onClick={() => { }}>Close</button>
                 </div>
             </div>
         </div>

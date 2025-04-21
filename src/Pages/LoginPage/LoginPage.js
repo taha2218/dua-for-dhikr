@@ -1,14 +1,15 @@
 import './LoginPage.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth, provider } from '../../Firebase/firebase';
-import { signInWithPopup } from 'firebase/auth';
+import { googleSignIn } from '../../Actions/AuthActions';
 import duaLogo from '../../static/Logos/DUA_LOGO.png';
 import Illustration from '../../static/Logos/mosque.png';
 import googleIcon from '../../static/Logos/search.png';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 function LoginPage() {
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const storedUser = localStorage.getItem('duaUser');
@@ -27,42 +28,40 @@ function LoginPage() {
     }, [navigate]);
 
     const handleGoogleSignIn = async () => {
+        setLoading(true); // Show loader
         try {
-            const result = await signInWithPopup(auth, provider);
-            const user = result.user;
-
-            const userInfo = {
-                name: user.displayName,
-                email: user.email,
-                uid: user.uid,
-            };
-
+            const userInfo = await googleSignIn();
             localStorage.setItem('duaUser', JSON.stringify(userInfo));
             navigate('/home');
         } catch (error) {
-            console.error('Error signing in:', error);
+            console.error('Login failed:', error);
+        } finally {
+            setLoading(false); // Hide loader
         }
     };
 
     return (
-        <div className='login-page-container'>
-            <div className='dua-illustration'>
-                <img src={Illustration} alt="Mosque Illustration" />
-            </div>
-            <div className='dua-logo'>
-                <img src={duaLogo} alt="DUA Logo" />
-                <div className='dua-tagline'>
-                    {'STAY CONNECTED TO ALLAH'.split(' ').map((char, index) => (
-                        <span key={index}>{char}</span>
-                    ))}
+        <>
+            {loading && <LoadingPage />}
+            <div className='login-page-container'>
+                <div className='dua-illustration'>
+                    <img src={Illustration} alt="Mosque Illustration" />
+                </div>
+                <div className='dua-logo'>
+                    <img src={duaLogo} alt="DUA Logo" />
+                    <div className='dua-tagline'>
+                        {'STAY CONNECTED TO ALLAH'.split(' ').map((char, index) => (
+                            <span key={index}>{char}</span>
+                        ))}
+                    </div>
+                </div>
+                <div className='sign-in-button'>
+                    <button className='button-dark' onClick={handleGoogleSignIn}>
+                        <img src={googleIcon} alt="Google icon" className='google-icon' /> Google Sign In
+                    </button>
                 </div>
             </div>
-            <div className='sign-in-button'>
-                <button className='button-dark' onClick={handleGoogleSignIn}>
-                    <img src={googleIcon} alt="Google icon" className='google-icon' /> Google Sign In
-                </button>
-            </div>
-        </div>
+        </>
     );
 }
 
