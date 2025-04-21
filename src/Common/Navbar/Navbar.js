@@ -1,5 +1,5 @@
 import { FiLogOut } from 'react-icons/fi';
-import { GiHamburgerMenu, GiExitDoor } from 'react-icons/gi';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiMenuUnfold2Line } from "react-icons/ri";
 import { useNavigate, useLocation } from 'react-router-dom';
 import { auth } from '../../Firebase/firebase';
