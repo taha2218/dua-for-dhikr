@@ -36,7 +36,9 @@ function LoginPage() {
         } catch (error) {
             console.error('Login failed:', error);
         } finally {
-            setLoading(false); // Hide loader
+            setTimeout(() => {
+                setLoading(false);
+            }, 500);
         }
     };
 

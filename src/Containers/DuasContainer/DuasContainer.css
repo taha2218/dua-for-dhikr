@@ -1,0 +1,12 @@
+.duas-container {
+    font-family: sans-serif;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0;
+}
