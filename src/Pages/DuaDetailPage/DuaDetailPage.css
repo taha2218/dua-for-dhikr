@@ -35,3 +35,38 @@
     text-align: justify;
     line-height: 2.8rem;
 }
+
+.reference-section {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-left: 3px solid black;
+    background-color: #f9f9f9;
+    max-width: 700px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.reference-block {
+    margin: 1rem;
+    margin-bottom: 1rem;
+}
+
+.reference-text {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: 'Inter Tight', sans-serif;
+    color: #222;
+}
+
+.reference-source {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 0rem;
+}
