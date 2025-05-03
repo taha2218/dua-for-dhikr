@@ -248,5 +248,29 @@
                 "source": "Surah Al-Baqarah 2:286"
             }
         ]
+    },
+    {
+        "id": "dhikr_023",
+        "arabic": "اللَّهُمَّ رَحْمَتَكَ أَرْجُو، فَلَا تَكِلْنِي إِلَىٰ نَفْسِي طَرْفَةَ عَيْنٍ، وَأَصْلِحْ لِي شَأْنِي كُلَّهُ، لَا إِلَهَ إِلَّا أَنْتَ",
+        "transliteration": "Allāhumma raḥmataka arjū, fa-lā takilnī ilā nafsī ṭarfata ʿayn, wa aṣliḥ lī sha’nī kullah, lā ilāha illā anta",
+        "translation": "O Allah! Your mercy is what I hope for, so do not leave me in charge of my affairs even for the blink of an eye. And make all of my affairs well-ordered. There is no god but You.",
+        "references": [
+            {
+                "text": "The Messenger of Allah (ﷺ) said: The supplications to be used by one who is distressed are: 'O Allah! Your mercy is what I hope for. Do not abandon me to myself for an instant, but put all my affairs in good order for me. There is no god but You.'",
+                "source": "Sunan Abi Dawud 5090"
+            }
+        ]
+    },
+    {
+        "id": "dhikr_024",
+        "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ بِأَنِّي أَشْهَدُ أَنَّكَ أَنْتَ اللَّهُ، لَا إِلَهَ إِلَّا أَنْتَ، الْأَحَدُ الصَّمَدُ، الَّذِي لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ",
+        "transliteration": "Allāhumma innī as’aluka bi-annī ash-hadu annaka antallāh, lā ilāha illā ant, al-aḥad aṣ-ṣamad, alladhī lam yalid wa lam yūlad, wa lam yakun lahu kufuwan aḥad",
+        "translation": "O Allah, indeed I ask You by testifying that You are Allah, there is no god but You, the One, the Self-Sufficient, who does not beget nor was He begotten, and there is none comparable to Him.",
+        "references": [
+            {
+                "text": "The Prophet (ﷺ) heard a man supplicating with this and said: 'By the One in Whose Hand is my soul, he has asked Allah by His Greatest Name – the one which, if He is called upon by it, He responds, and when He is asked by it, He gives.'",
+                "source": "Jami` at-Tirmidhi 3475"
+            }
+        ]
     }
 ]
