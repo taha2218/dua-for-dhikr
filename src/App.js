@@ -3,6 +3,7 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import HomePage from './Pages/HomePage/HomePage';
 import ProtectedRoute from './ProtectedRoute';
 import DuasPage from './Pages/DuasPage/DuasPage';
+import DuaDetailPage from './Pages/DuaDetailPage/DuaDetailPage';
 
 function App() {
   return (
@@ -23,6 +24,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <DuasPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/dua-detail/:id"
+            element={
+              <ProtectedRoute>
+                <DuaDetailPage />
               </ProtectedRoute>
             }
           />

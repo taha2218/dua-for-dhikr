@@ -14,7 +14,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Inter Tight', sans-serif;
     letter-spacing: 0.04rem;
 }
 
@@ -28,4 +28,5 @@
     overflow: hidden;
     text-overflow: ellipsis;
     word-spacing: 0.1rem;
+    margin-bottom: 4px;
 }

@@ -1,0 +1,58 @@
+.taskbar-container {
+    width: 100%;
+    box-sizing: border-box;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0rem;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+.taskbar-left,
+.taskbar-right {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    width: 40px;
+}
+
+.taskbar-center {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-toggle-btn {
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Almarai', sans-serif;
+}
+
+.lang-toggle-btn.selected {
+    background-color: black;
+    color: white;
+}
+
+.start-dhikr {
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    font-weight: lighter;
+    letter-spacing: 0.03rem;
+}

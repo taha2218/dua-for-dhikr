@@ -10,8 +10,9 @@ function DuasContainer() {
             {dhikrList.map((dhikr) => (
                 <React.Fragment key={dhikr.id}>
                     <DhikrCard
-                        arabic={dhikr.arabic}
-                        transliteration={dhikr.transliteration}
+                        id={dhikr?.id}
+                        arabic={dhikr?.arabic}
+                        transliteration={dhikr?.transliteration}
                     />
                     <hr className="divider" />
                 </React.Fragment>

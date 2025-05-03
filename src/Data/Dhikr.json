@@ -1,33 +1,30 @@
 [
     {
         "id": "dhikr_001",
-        "arabic": "اللَّهُ أَكْبَرُ",
-        "transliteration": "Allāhu Akbar"
+        "arabic": "سُبْحَانَ اللّٰه، الْـحَمْـدُ للهِ، لَا إِلٰهَ إِلَّا اللّٰه، اللَّهُ أَكْبَرُ",
+        "transliteration": "Subḥānallāh, Al-ḥamdu lillāh, Lā ilāha illā Allāh, Allāhu Akbar",
+        "references": [
+            {
+                "text": "Abu Huraira reported Allah's Messenger (ﷺ) as saying: The uttering of (these words): 'Exalted is Allah (He is free from imperfection), all praise is due to Allah, there is no god but Allah, and Allah is the Greatest,' is dearer to me than anything over which the sun rises.",
+                "source": "Sahih Muslim 2695"
+            }
+        ]
     },
     {
         "id": "dhikr_002",
-        "arabic": "الْـحَمْـدُ للهِ",
-        "transliteration": "Al-ḥamdu lillāh"
-    },
-    {
-        "id": "dhikr_003",
-        "arabic": "سُبْحَانَ اللّٰه",
-        "transliteration": "Subḥānallāh"
-    },
-    {
-        "id": "dhikr_004",
         "arabic": "أَسْتَغْفِرُ اللّٰهَ",
-        "transliteration": "Astaghfirullāh"
+        "transliteration": "Astaghfirullāh",
+        "reference": [
+            {
+                "text": "And said, 'Ask forgiveness of your Lord. Indeed, He is ever a Perpetual Forgiver. He will send [rain from] the sky upon you in [continuing] showers, and give you increase in wealth and children and provide for you gardens and provide for you rivers.'",
+                "source": "Surah Nuh 71:10-12"
+            }
+        ]
     },
     {
         "id": "dhikr_005",
         "arabic": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ",
         "transliteration": "Lā ḥawla wa lā quwwata illā billāh"
-    },
-    {
-        "id": "dhikr_006",
-        "arabic": "لَا إِلٰهَ إِلَّا اللّٰهُ",
-        "transliteration": "Lā ilāha illā Allāh"
     },
     {
         "id": "dhikr_007",
